@@ -1,0 +1,416 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url(http://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900);
+  @import url(http://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700);
+
+/* TO DO LIST
+================================================== */
+.tdl-holder{
+  margin:0px auto;
+  width: 100%; 
+}
+
+.tdl-holder h2{
+  background-color: #de3f53;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  color:#fff;
+  font-family:"Roboto Condensed", Arial, sans-serif;
+  font-size:16px;
+  font-weight: 100;
+  line-height: 56px;
+  padding-left: 15px;
+  margin:0;
+}
+
+.tdl-holder ul, .tdl-holder li {
+  list-style: none;
+  margin:0;
+  padding:0;
+}
+
+.tdl-holder li{
+  color: #b1b2c9;
+  opacity: 0.6;
+  border-radius: 3px;
+}
+
+.tdl-holder li span{
+  color: #353333;
+  margin-left:30px;
+  -webkit-transition: all .2s linear;
+     -moz-transition: all .2s linear;
+       -o-transition: all .2s linear;
+        transition: all .2s linear; 
+}
+
+.tdl-holder label{
+  cursor:pointer;
+  display:block;
+  line-height: 56px;
+  padding: 0 15px; 
+  position: relative;
+}
+
+.tdl-holder label:hover{
+  background-color: #c4c9cc;
+  border-radius: 5px;
+  color:#8284a3;
+}
+
+.tdl-holder label a{
+  color:#fff;
+  display:none;
+  float:right;
+  font-weight: bold;
+  line-height: normal;
+  margin-top: 20px;
+  text-align: center;
+  text-decoration: none;
+  -webkit-transition: all .2s linear;
+     -moz-transition: all .2s linear;
+       -o-transition: all .2s linear;
+        transition: all .2s linear; 
+}
+
+.tdl-holder label:hover a{
+  display: block;
+}
+
+.tdl-holder label a:hover{  
+  color:#de3f53;
+}
+
+.tdl-holder input[type="checkbox"]{
+  cursor: pointer;
+  opacity: 0;
+  position: absolute;
+}
+
+.tdl-holder input[type="checkbox"] + i{
+  background-color: #404a6e;
+  border-radius: 50%;
+  display: block;
+  height: 16px;
+  position: absolute;
+  top:20px;
+  width: 16px;  
+  z-index: 1;
+}
+
+.tdl-holder input[type="checkbox"]:checked + i::after{
+  background-color: #6E6E96;
+  border-radius: 50%;
+  content: '';
+  display: block;
+  height:8px;
+  left:4px;
+  position: absolute;
+  top:4px;
+  width:8px;  
+  z-index: 2;
+}
+
+.tdl-holder input[type="checkbox"]:checked ~ span{  
+  color: #586186;
+  text-decoration: line-through;
+}
+
+.tdl-holder input[type="text"]{
+    background-color: #c4c9cc;
+    border: 1px solid #fff;
+    border-radius: 3px;
+    box-shadow: none;
+    color: #565656;
+    height: 38px;
+    max-width: 100%;
+    transition: all 300ms linear 0s;
+  color: #464f72;
+  font-size:14px;
+  margin:0;
+  padding:20px 15px;
+  width:620px;
+}
+
+.tdl-holder input[type="text"]:hover{
+  color:#4c577f;
+}
+
+.tdl-holder input[type="text"]:focus{
+  color:#171d37;
+}
+
+.tdl-holder ::-webkit-input-placeholder {color: #464f72;} /* WebKit browsers */
+.tdl-holder :-moz-placeholder       {color: #464f72;} /* Mozilla Firefox 4 to 18 */
+.tdl-holder ::-moz-placeholder      {color: #464f72;} /* Mozilla Firefox 19+ */
+.tdl-holder :-ms-input-placeholder    {color: #464f72;} /* Internet Explorer 10+ */
+
+.tdl-holder li.remove{
+  -webkit-animation:collapseItem 300ms ease;
+      animation:collapseItem 300ms ease;
+  -webkit-transform-origin: 50% 0%;
+    -ms-transform-origin: 50% 0%;
+      transform-origin: 50% 0%;
+
+}
+
+.tdl-holder li.remove span{
+  color: #586186;
+  text-decoration: line-through;
+}
+
+@keyframes collapseItem {
+    0%    { -ms-transform: perspective(500px) rotateX(0deg);transform: perspective(500px) rotateX(0deg);  }
+    100%  { -ms-transform: perspective(500px) rotateX(-90deg);transform: perspective(500px) rotateX(-90deg); }
+}
+
+@-webkit-keyframes collapseItem {
+    0%    { -webkit-transform: perspective(500px) rotateX(0deg);  }
+    100%  { -webkit-transform: perspective(500px) rotateX(-90deg);}
+}
+.tdl-holder input[type="checkbox"] + i {
+  background-color: #0c41ff;
+}
+.tdl-holder input[type="checkbox"]:checked + i::after {
+  background-color: #111212;
+}
+h3 {
+  font-family: 'Raleway', sans-serif;
+  color: #808080;
+}
+  a {
+  color: #333;
+ }
+ a: hover {
+  color: #ccc;
+ }
+ ul.board {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+ }
+ ul.board li {
+    margin: 5px;
+    margin-top: 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+    height: 120px;
+    font-size: 18px;
+    background: #fcfcfc;
+    padding: 10px;
+ }
+ ul.board li span {
+    color: #fff;
+ }
+ span.create-board {
+    color: #9d9d9d !important;
+ }
+ .background {
+    background: #39677b !important;
+ }
+ .myadmin-dd .dd-list .dd-item .dd-handle {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: normal;
+    width: 100% !important;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+.nameBoard {
+    color: #39677b;
+    font-size: 25px;
+    border-bottom: 0 !important;
+}
+.liststyle {
+    border-bottom: 0 !important;
+    font-size: 16px;
+    font-weight: 400;
+}
+.panel-action {
+    margin-top: 10px;
+}
+.myadmin-dd .dd-list .dd-item button.text-left {
+  height: auto;
+  font-size: 16px;
+  margin: 0;
+  color: #fff;
+  width: 80px;
+}
+.myadmin-dd .dd-list .dd-item .editable-buttons button {
+  height: auto;
+  font-size: 14px;
+  margin: 0 5px;
+  width: auto;
+  color: #fff;
+}
+.scrollbarheight {
+  /*width: 10000px;*/
+  min-height: 400px;
+  max-height: 530px;
+  position: relative;
+  white-space: nowrap;
+}
+.col-md-3-dsa {
+  width: 283px;
+  margin-right: 20px;
+  position: relative;
+  display: inline-flex;
+}
+.white-box {
+  white-space: normal;
+}
+.myadmin-dd .dd-list .dd-item .col-xs-3 button {
+  margin: 0 0 10px;
+  width: 100%;
+  padding: 10px 10px 10px 20px;
+  color: #fff;
+  text-align: left;
+  font-size: 15px;
+}
+button#update {
+  margin: 15px 0;
+  width: auto;
+  font-size: 16px;
+  color: #fff;
+}
+.button_default, .button_default.disabled {
+  background: #39677b !important;
+  border: 1px solid #849db5;
+}
+.button_default:hover {
+  background : #39677b !important;
+  opacity: 0.7;
+}
+.header {
+  border-bottom: 1px solid #e5e5e5;
+  text-align: center; 
+  font-size: 16px;
+  color: #2f4f4f;
+}
+.panel-body {
+  width: 300px;
+  /*height: 200px;*/
+}
+.form {
+  padding-right: 1px;
+  padding-left: 5px;
+  padding-top: 1px;
+  padding-bottom: 5px;
+}
+.modal-body .editable-input {
+  width: 100%;
+}
+.editable-input textarea.form-control {
+  height: auto;
+  width: 100%;
+}
+.editableform .control-group {
+  width: 100%;
+}
+.editable-container.editable-inline {
+  width: 100% !important;
+}
+.editable-click, a.editable-click, a.editable-click:hover {
+  border-bottom: 0;
+  cursor: pointer;
+}
+.comment-center .mail-contnet .mail-desc {
+  max-height: 50px;
+  height: auto;
+}
+.clockpicker-popover {
+  z-index: 999999 !important;
+}
+.btn-infoarchive {
+  background: #fff;
+  color: #fff;
+  border-radius: 5px;
+}
+.btn-infoarchive:hover,
+.btn-infoarchive.disabledarchive:hover,
+.btn-infoarchive:focus,
+.btn-infoarchive.disabledarchive:focus,
+.btn-infoarchiver.focus,
+.btn-infoarchive.disabledarchive.focusarchive {
+  background: #e2e4e6;
+  color: #333;
+  border-radius: 3px;
+}
+
+
+/* ACTIVITIES
+================================================== */
+.mdl-textfield {
+  margin-top: 20px;
+}
+.phenom.mod-other-type {
+    min-height: 18px;
+    font-size: 13px;
+}
+.phenom {
+    border-bottom: 1px solid #E2E4E6;
+    min-height: 30px;
+    padding: 15px 0;
+    position: relative;
+}
+.phenom.mod-other-type .phenom-creator {
+    height: 4px;
+    left: -26px;
+    top: 9pt;
+    width: 18px;
+}
+.phenom.mod-other-type .phenom-creator .member, .phenom.mod-other-type .phenom-creator .member-avatar {
+    height: 30px;
+    width: 30px;
+}
+.member {
+    background-color: #D6DADC;
+    border-radius: 3px;
+    color: #4d4d4d;
+    display: block;
+    float: left;
+    height: 30px;
+    margin: 0 4px 4px 0;
+    overflow: hidden;
+    position: relative;
+    width: 30px;
+    user-select: none;
+    z-index: 0;
+}
+.member-initials {
+    display: block;
+    font-size: 9pt;
+    font-weight: 700;
+    height: 30px;
+    left: 0;
+    line-height: 30px;
+    overflow: hidden;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 100%;
+}
+.phenom-desc {
+    display: inline;
+    margin: 0 6px 0 0;
+    word-wrap: break-word;
+}
+.inline-member {
+    cursor: pointer;
+}
+.u-font-weight-bold, .u-form-error, .u-form-info, th {
+    font-weight: 700;
+}
+.phenom-meta {
+    display: inline-block;
+    font-size: 9pt;
+    margin: 0;
+    min-width: 110px;
+}
+.quiet, .quiet a {
+    color: #8c8c8c;
+}
+.btn-infomember {
+  width: 40px;
+  height: 40px;
+  background: #edf1f5;
+}

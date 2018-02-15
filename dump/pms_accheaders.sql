@@ -1,0 +1,57 @@
+-- MySQL dump 10.13  Distrib 5.7.12, for Linux (x86_64)
+--
+-- Host: localhost    Database: pms
+-- ------------------------------------------------------
+-- Server version	5.5.5-10.1.13-MariaDB
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `accheaders`
+--
+
+DROP TABLE IF EXISTS `accheaders`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `accheaders` (
+  `id` varchar(30) NOT NULL DEFAULT '',
+  `name` varchar(300) NOT NULL DEFAULT '',
+  `accgroups_id` int(4) NOT NULL DEFAULT '0',
+  `remark` varchar(300) NOT NULL DEFAULT '',
+  `users_id` varchar(30) NOT NULL DEFAULT '',
+  `timestamp` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `id` (`id`),
+  KEY `id2` (`accgroups_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `accheaders`
+--
+
+LOCK TABLES `accheaders` WRITE;
+/*!40000 ALTER TABLE `accheaders` DISABLE KEYS */;
+INSERT INTO `accheaders` VALUES ('100','AKTIVA',1,'','admin','2010-10-27 08:05:53'),('110','BANK',1,'','admin','2010-10-27 08:07:07'),('120','PERSEDIAAN',1,'','admin','2010-10-27 08:29:21'),('150','PIUTANG USAHA',1,'','admin','2010-10-27 08:07:23'),('200','PERLENGKAPAN',2,'','admin','2010-10-27 08:28:23'),('301','AKTIVA LAIN LAIN',3,'','admin','2010-10-27 08:10:03'),('500','HUTANG LANCAR',4,'','admin','2012-10-31 11:30:44'),('700','PENDAPATAN UNIT SERBA USAHA',7,'','admin','2010-10-27 08:11:57'),('701','PENDAPATAN UNIT TOKO',7,'','admin','2010-10-27 08:12:15'),('702','PENDAPATAN USAHA LAIN',7,'','admin','2010-10-27 08:12:43'),('703','PENDAPATAN DILUAR USAHA',7,'','admin','2010-10-27 08:13:00'),('704','PENDAPATAN RESTORAN',7,'','admin','2013-01-02 08:56:30'),('800','MODAL',6,'','admin','2012-11-02 10:50:37'),('850','HARGA POKOK UNIT PENJUALAN',8,'','admin','2011-07-26 00:00:00'),('860','BIAYA OPERASIONAL',9,'','admin','2010-10-27 08:13:17'),('861','BIAYA ORGANISASI',9,'','admin','2010-10-27 08:13:39'),('862','BIAYA ADM. DAN UMUM',9,'','admin','2010-10-27 08:14:04'),('863','BIAYA LAIN LAIN',9,'','admin','2010-10-27 08:14:29');
+/*!40000 ALTER TABLE `accheaders` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2016-07-22 15:11:08
